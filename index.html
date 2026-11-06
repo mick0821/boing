@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boing: Algebra by Dragging</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Sniglet:wght@800&display=swap"
+    />
+    <script type="module" crossorigin src="./assets/index-TJCbkqeN.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CCKh3wmI.css">
+  </head>
+  <body>
+    <main id="home-screen" class="home">
+      <!-- The logo's drawings come from src/logo/ and are put in by main.ts. -->
+      <h1 id="logo" class="logo-heading"></h1>
+      <p class="tagline">Solve equations by dragging the terms around.</p>
+      <h2 class="mode-heading">Pick a mode</h2>
+      <div id="mode-list" class="mode-list"></div>
+    </main>
+    <main id="levels-screen" class="levels" hidden>
+      <header class="play-header">
+        <button id="levels-back" class="control menu-control" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" /></svg>
+          Menu
+        </button>
+        <div id="levels-logo" class="play-logo"></div>
+      </header>
+      <h2 id="levels-title" class="levels-title"></h2>
+      <p id="levels-summary" class="levels-summary"></p>
+      <div id="level-grid" class="level-grid"></div>
+      <button id="reset-progress" class="text-control" type="button">Reset progress</button>
+    </main>
+    <main id="play-screen" class="game" hidden>
+      <header class="play-header">
+        <button id="menu" class="control menu-control" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" /></svg>
+          <span id="menu-label">Menu</span>
+        </button>
+        <div id="play-logo" class="play-logo"></div>
+      </header>
+      <p id="level" class="level"></p>
+      <p id="message" class="message" aria-live="polite"></p>
+      <div id="board" class="board">
+        <div id="left" class="side" data-side="left"></div>
+        <div id="equals" class="equals">=</div>
+        <div id="right" class="side" data-side="right"></div>
+      </div>
+      <div id="play-controls" class="controls">
+        <button id="undo" class="control icon-control" type="button" aria-label="Undo" title="Undo" disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 14 4 9l5-5" />
+            <path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11" />
+          </svg>
+        </button>
+        <button id="reset" class="control" type="button">Restart equation</button>
+        <button id="show-tips" class="control" type="button">Show tips</button>
+      </div>
+      <div id="solved-controls" class="controls" hidden>
+        <button id="restart-level" class="control" type="button">Restart level</button>
+        <button id="continue" class="control primary-control" type="button">Continue</button>
+      </div>
+    </main>
+  </body>
+</html>
